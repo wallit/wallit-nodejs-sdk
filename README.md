@@ -31,7 +31,7 @@ var requestCallback = function(err, data) {
 var bunyan = require('bunyan');
 var log = bunyan.createLogger({name: "iMoneza"});
 
-var iMoneza = require('@imoneza/api-library');
+var iMoneza = require('@imoneza/imoneza-nodejs-api');
 
 var getProperty = new iMoneza.options.manage.getProperty();
 var connection = new iMoneza.connection(manageApiKey, manageApiSecret, accessApiKey, accessApiSecret, log);
