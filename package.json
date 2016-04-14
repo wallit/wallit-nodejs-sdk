@@ -4,7 +4,7 @@
   "description": "iMoneza NodeJS API Library",
   "main": "./lib/index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests --recursive"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "request": "^2.71.0"
   },
   "devDependencies": {
-    "bunyan": "^1.8.0"
+    "bunyan": "^1.8.0",
+    "chai": "^3.5.0"
   }
 }
