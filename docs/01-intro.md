@@ -15,7 +15,7 @@ customization or parameters, apply those to the options object before performing
 
 2. Create a Connection Object  
 A connection object accepts a number of elements as dependencies of its construction.  The Management API and Access API key
-and secrets are required.  Finally, pass in an instance of a logging library compatible with Bunyan.  This step is not
+and secrets are required.  Finally, pass in an instance of a logging library compatible with [Bunyan](https://www.npmjs.com/package/bunyan).  This step is not
 required, but it is highly recommended.
 
 3. Call the request method  
