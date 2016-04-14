@@ -40,10 +40,10 @@ connection.request(getProperty, requestCallback);
 
 ## Documentation
 
-[Introduction](docs/01-intro.md)
-[The Connection Object](docs/02-connection.md)
-[Options Objects](docs/03-options.md)
-[Return Data: Main API documentation](http://imoneza.github.io/documentation/docs/api)
+[Introduction](docs/01-intro.md)  
+[The Connection Object](docs/02-connection.md)  
+[Options Objects](docs/03-options.md)  
+[Return Data: Main API documentation](http://imoneza.github.io/documentation/docs/api)  
 
 ## Todo
 
