@@ -79,7 +79,7 @@ var Connection = function(manageApiKey, manageApiSecret, accessApiKey, accessApi
             requestType = options.getRequestType();
 
         var url = options.getApiBaseURL() + endPoint;
-        log.debug("URL: " + url);
+        debug("URL: " + url);
 
         var timestamp = moment().utc().format('ddd, DD MMM YYYY HH:mm:ss ') + 'GMT';
         var tokenValues = [
@@ -88,16 +88,16 @@ var Connection = function(manageApiKey, manageApiSecret, accessApiKey, accessApi
             endPoint.toLowerCase(),
             ''
         ];
-        log.debug({tokenValues: tokenValues}, 'Token values');
+        debug({tokenValues: tokenValues}, 'Token values');
 
         var tokenValuesString = tokenValues.join("\n");
         var hmac = crypto.createHmac('sha256', keys.secret);
         hmac.update(tokenValuesString);
         var token = hmac.digest('base64');
-        log.debug("Token created: " + token);
+        debug("Token created: " + token);
 
         var authentication = keys.key + ":" + token;
-        log.info("About to send to " + url + " via " + requestType + " with options of " + options.constructor.name);
+        info("About to send to " + url + " via " + requestType + " with options of " + options.constructor.name);
 
         var requestOptions = {
             url: url,
@@ -110,9 +110,16 @@ var Connection = function(manageApiKey, manageApiSecret, accessApiKey, accessApi
             }
         };
         request(requestOptions, connectionRequestCallback);
-        log.debug("Request has been submitted");
+        debug("Request has been submitted");
     };
 
+    /**
+     * Handle the request to the API
+     * @param error
+     * @param response
+     * @param body
+     * @returns {*}
+     */
     function connectionRequestCallback(error, response, body) {
 
         if (error) {
@@ -120,7 +127,7 @@ var Connection = function(manageApiKey, manageApiSecret, accessApiKey, accessApi
             return userRequestCallback(new Error(error));
         }
 
-        log.debug({response: response}, "Response received.");
+        debug({response: response}, "Response received.");
 
         // handle errors
         switch (response.statusCode) {
@@ -129,17 +136,17 @@ var Connection = function(manageApiKey, manageApiSecret, accessApiKey, accessApi
                 break;
 
             case 401:
-                log.debug({type: "AuthenticationFailureError", body: body}, "Error sent to user callback.");
+                debug({type: "AuthenticationFailureError", body: body}, "Error sent to user callback.");
                 return userRequestCallback(new AuthenticationFailureError(body));
                 break;
 
             case 403:
-                log.debug({type: "AccessDeniedError", body: body}, "Error sent to user callback.");
+                debug({type: "AccessDeniedError", body: body}, "Error sent to user callback.");
                 return userRequestCallback(new AccessDeniedError(body));
                 break;
 
             case 404:
-                log.debug({type: "NotFoundError", body: body}, "Error sent to user callback.");
+                debug({type: "NotFoundError", body: body}, "Error sent to user callback.");
 
                 //sometimes it's a json string, sometimes it's not... so there's that.
                 var errorString = '';
@@ -153,13 +160,34 @@ var Connection = function(manageApiKey, manageApiSecret, accessApiKey, accessApi
                 return userRequestCallback(new NotFoundError(errorString));
                 break;
             default:
-                log.debug({type: "Error", body: body}, "Error sent to user callback.");
+                debug({type: "Error", body: body}, "Error sent to user callback.");
                 return userRequestCallback(new Error("Status Code: " + response.statusCode + ": " + body));
         }
 
-        log.debug("All error checking passed, has successful response.");
+        debug("All error checking passed, has successful response.");
+        info("The request was successful.");
 
-        // do user clalback success with data object
+        userRequestCallback(null, JSON.parse(body));
+    }
+
+    /**
+     * Handle logging of info
+     */
+    function info()
+    {
+        if (log) {
+            log.info.apply(log, arguments);
+        }
+    }
+
+    /**
+     * handles the debug logging
+     */
+    function debug()
+    {
+        if (log) {
+            log.debug.apply(log, arguments);
+        }
     }
 };
 
