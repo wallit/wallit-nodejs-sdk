@@ -9,7 +9,7 @@ var chai = require('chai'),
 describe('GetProperty', function() {
     it('Creates a proper endpoint', function() {
         var getProperty = new GetProperty();
-        getProperty.setAccessKey('access-key-here');
+        expect(getProperty.setAccessKey('access-key-here')).to.be.an.instanceof(GetProperty);
         expect(getProperty.getEndPoint()).to.equal('/api/Property/access-key-here');
     });
     it('Should give a request type of GET', function() {
