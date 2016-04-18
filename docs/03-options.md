@@ -14,7 +14,7 @@ The options are spit between the Access and the Management APIs.  Let's look thr
 
 ### Options Object Definitions
 
-#### `GetProperty`
+#### `Manage.GetProperty`
 
 This is used to retrieve the current property details.  This uses your API key to determine the property.  There are no
 setters that you'll need to access.
