@@ -43,3 +43,13 @@ This is used to retrieve resources from the external key and user temp token.  T
 
 This is used to retrieve the current property details.  This uses your API key to determine the property.  There are no
 setters that you'll need to access.
+
+#### `Manage.GetResource`
+
+This is used to retrieve a resource from the current property.
+
+- `setResourceKey()` Use this to set the resource key (or external ID) of the resource belonging to your property that you'd like to retrieve.
+
+#### `Manage.GetResourcesFromProperty`
+
+This is used to retrieve all the resources from the current property.  There are no setters that you'll need to access.
