@@ -14,6 +14,31 @@ The options are spit between the Access and the Management APIs.  Let's look thr
 
 ### Options Object Definitions
 
+#### `Access.GetResourceFromResourceKey`
+
+This is used to retrieve resources from the external key (or resource key).  The following setters may be used:
+
+- `setResourceKey()`  Use this to set the resource key for your resource you're attempting to retrieve.
+
+- `setResourceURL()`  This is used to set the URL of the resource.
+
+- `setUserToken()`  This is optional for the first request - but it should be used after the first request with all 
+future requests.  This is how a user is identified.
+
+- `setIP()`  This is optional but is recommended for logging and security.  
+
+#### `Access.GetResourceFromTemporaryUserToken`
+
+This is used to retrieve resources from the external key and user temp token.  The following setters may be used:
+
+- `setResourceKey()`  Use this to set the resource key for your resource you're attempting to retrieve.
+
+- `setResourceURL()`  This is used to set the URL of the resource.
+
+- `setTemporaryUserToken()`  Set the temporary user token.
+
+- `setIP()`  This is optional but is recommended for logging and security.  
+
 #### `Manage.GetProperty`
 
 This is used to retrieve the current property details.  This uses your API key to determine the property.  There are no
