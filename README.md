@@ -1,5 +1,7 @@
 # iMoneza NodeJS API
 
+[![Build Status](https://travis-ci.org/iMoneza/imoneza-php-api.svg?branch=master)](https://travis-ci.org/iMoneza/imoneza-nodejs-api)
+
 A NodeJS library to integrate iMoneza into your application.
 
 Using your <http://imoneza.com> account, you can interact with all parts of the API using this library.  This library

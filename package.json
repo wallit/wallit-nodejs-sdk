@@ -4,7 +4,8 @@
   "description": "iMoneza NodeJS API Library",
   "main": "./lib/index",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "./node_modules/mocha/bin/mocha tests --recursive",
+    "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec tests --recursive"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
   },
   "devDependencies": {
     "bunyan": "^1.8.0",
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5"
   }
 }
