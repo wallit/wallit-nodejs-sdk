@@ -1,5 +1,6 @@
 # iMoneza NodeJS API
 
+![Version](https://img.shields.io/npm/v/imoneza-api.svg)
 [![Build Status](https://travis-ci.org/iMoneza/imoneza-php-api.svg?branch=master)](https://travis-ci.org/iMoneza/imoneza-nodejs-api)
 [![Coverage Status](https://coveralls.io/repos/github/iMoneza/imoneza-nodejs-api/badge.svg?branch=master)](https://coveralls.io/github/iMoneza/imoneza-nodejs-api?branch=master)
 
@@ -12,7 +13,7 @@ was tested and is supported on NodeJS 5.* - but may be compatible with older ver
 
 This library can be installed using npm.
 
-**todo** submit to npm and include install command here
+npm install imoneza-api
 
 ## Basic Usage
 
@@ -34,7 +35,7 @@ var requestCallback = function(err, data) {
 var bunyan = require('bunyan');
 var log = bunyan.createLogger({name: "iMoneza"});
 
-var iMoneza = require('@imoneza/imoneza-nodejs-api');
+var iMoneza = require('imoneza-api');
 
 var getProperty = new iMoneza.options.manage.getProperty();
 var connection = new iMoneza.connection(manageApiKey, manageApiSecret, accessApiKey, accessApiSecret, log);
@@ -47,7 +48,6 @@ connection.request(getProperty, requestCallback);
 [The Connection Object](docs/02-connection.md)  
 [Options Objects](docs/03-options.md)  
 [Return Data: Main API documentation](http://imoneza.github.io/documentation/docs/api)  
-
 
 ## About
 

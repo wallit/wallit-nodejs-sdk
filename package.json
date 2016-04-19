@@ -1,5 +1,5 @@
 {
-  "name": "@imoneza/api",
+  "name": "imoneza-api",
   "version": "1.0.0",
   "description": "iMoneza NodeJS API Library",
   "main": "./lib/index",

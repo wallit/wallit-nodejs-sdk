@@ -10,7 +10,7 @@ a [Bunyan](https://www.npmjs.com/package/bunyan) compatible logger if you'd like
 
 The connection can be created like this:
 
-    var iMoneza = require('@imoneza/imoneza-nodejs-api');
+    var iMoneza = require('imoneza-api');
     var connection = new iMoneza.connection(manageApiKey, manageApiSecret, accessApiKey, accessApiSecret, log);
 
 **log** It is recommended to pass in Bunyan as the logger.  This argument is not required, however.  _Debug_ issues the
@@ -68,7 +68,7 @@ You might try an example like this:
         }
     }
 
-    var iMoneza = require('@imoneza/imoneza-nodejs-api');
+    var iMoneza = require('imoneza-api');
     var connection = new iMoneza.connection(manageApiKey, manageApiSecret, accessApiKey, accessApiSecret, log);
     var GetPropery = new iMoneza.options.manage.getProperty();
     connection.request(GetProperty, myCallback);
