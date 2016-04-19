@@ -1,6 +1,7 @@
 # iMoneza NodeJS API
 
 [![Build Status](https://travis-ci.org/iMoneza/imoneza-php-api.svg?branch=master)](https://travis-ci.org/iMoneza/imoneza-nodejs-api)
+[![Coverage Status](https://coveralls.io/repos/github/iMoneza/imoneza-nodejs-api/badge.svg?branch=master)](https://coveralls.io/github/iMoneza/imoneza-nodejs-api?branch=master)
 
 A NodeJS library to integrate iMoneza into your application.
 
