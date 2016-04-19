@@ -1,6 +1,6 @@
 # iMoneza NodeJS API
 
-![Version](https://img.shields.io/npm/v/imoneza-api.svg)
+[![Version](https://img.shields.io/npm/v/imoneza-api.svg)](https://www.npmjs.com/package/imoneza-api)
 [![Build Status](https://travis-ci.org/iMoneza/imoneza-php-api.svg?branch=master)](https://travis-ci.org/iMoneza/imoneza-nodejs-api)
 [![Coverage Status](https://coveralls.io/repos/github/iMoneza/imoneza-nodejs-api/badge.svg?branch=master)](https://coveralls.io/github/iMoneza/imoneza-nodejs-api?branch=master)
 
@@ -13,7 +13,7 @@ was tested and is supported on NodeJS 5.* - but may be compatible with older ver
 
 This library can be installed using npm.
 
-npm install imoneza-api
+`npm install imoneza-api`
 
 ## Basic Usage
 
