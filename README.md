@@ -45,10 +45,6 @@ connection.request(getProperty, requestCallback);
 [Options Objects](docs/03-options.md)  
 [Return Data: Main API documentation](http://imoneza.github.io/documentation/docs/api)  
 
-## Todo
-
-You can view [the issues](https://github.com/iMoneza/imoneza-nodejs-api/issues) to see what features are still slated to
-be completed.
 
 ## About
 
@@ -59,7 +55,8 @@ be completed.
 
 ### Bugs, Feature Requests and Testing
 
-Bugs and feature request are tracked on [GitHub](https://github.com/iMoneza/imoneza-nodejs-api/issues).
+The features of this project are handled internally by iMoneza.  However, we do encourage you to visit [the issues section](https://github.com/iMoneza/imoneza-nodejs-api/issues)
+here on GitHub if you have any suggestions, requests, or find a bug.
 
 ### Author
 

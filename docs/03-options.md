@@ -53,3 +53,39 @@ This is used to retrieve a resource from the current property.
 #### `Manage.GetResourcesFromProperty`
 
 This is used to retrieve all the resources from the current property.  There are no setters that you'll need to access.
+
+#### `Management.SaveResource`
+
+This is used to save a new resource or update an existing one.  The following setters are available:
+
+- `setExternalKey()` Use this to set the resource key (or external ID) of the resource.
+
+- `setName()` Use this to set the the internal name of the resource.
+
+- `setTitle()` Use this to set the title of the resource.
+
+- `setPricingGroupId()` Use this to pass in the pricing group ID for this resource.
+
+- `setActive()` Set a boolean whether this is active or not.
+
+- `setURL()` Set the resource URL.
+
+- `setByline()` The by-line of this element.
+
+- `setDescription()` Set the description.
+
+- `setPublicationDate()` Sets the publication date of this resource.
+
+- `setPricingModel()` The pricing model for this resource.
+
+- `setPrice()` The price of this content.
+
+- `setExpirationPeriodUnit()` What unit expirations should be measured in.
+
+- `setExpirationPeriodValue()` What the value for expiration should be.
+
+- `setTargetConversionRate()`
+
+- `setTargetConversionPriceFloor()`
+
+- `setTargetConversionHitsPerRecalculationPeriod()`
