@@ -27,6 +27,9 @@ future requests.  This is how a user is identified.
 
 - `setIP()`  This is optional but is recommended for logging and security.  
 
+- `setAdBlockerStatus()`  Optionally indicate if any ad block status indication was performed.  The allowed values are
+constant-like properties on the `AccessOptionsAbstract` object.
+
 #### `Access.GetResourceFromTemporaryUserToken`
 
 This is used to retrieve resources from the external key and user temp token.  The following setters may be used:
@@ -38,6 +41,9 @@ This is used to retrieve resources from the external key and user temp token.  T
 - `setTemporaryUserToken()`  Set the temporary user token.
 
 - `setIP()`  This is optional but is recommended for logging and security.  
+
+- `setAdBlockerStatus()`  Optionally indicate if any ad block status indication was performed.  The allowed values are
+constant-like properties on the `AccessOptionsAbstract` object.
 
 #### `Manage.GetProperty`
 
