@@ -4,7 +4,8 @@
 
 var chai = require('chai'),
     expect = chai.expect,
-    GetResourceAccessFromTemporaryUserToken = require('../../../lib/options/access/get-resource-access-from-temporary-user-token');
+    GetResourceAccessFromTemporaryUserToken = require('../../../lib/options/access/get-resource-access-from-temporary-user-token'),
+    AccessOptionsAbstract = require('../../../lib/options/access/_abstract');
 
 describe('GetResourceAccessFromTemporaryUserToken', function() {
     it('Should give a request type of GET', function() {
@@ -26,14 +27,20 @@ describe('GetResourceAccessFromTemporaryUserToken', function() {
         expect(getResourceAccessFromTemporaryUserToken.setResourceKey('key')).to.be.an.instanceof(GetResourceAccessFromTemporaryUserToken);
         expect(getResourceAccessFromTemporaryUserToken.setResourceUrl('some-url')).to.be.an.instanceof(GetResourceAccessFromTemporaryUserToken);
         expect(getResourceAccessFromTemporaryUserToken.setTemporaryUserToken('user-token')).to.be.an.instanceof(GetResourceAccessFromTemporaryUserToken);
+        expect(getResourceAccessFromTemporaryUserToken.setAdBlockerStatus(AccessOptionsAbstract.AD_BLOCKER_STATUS_UNKNOWN)).to.be.an.instanceof(GetResourceAccessFromTemporaryUserToken);
     });
     it('Should populate all the values using setters', function() {
         var getResourceAccessFromTemporaryUserToken = new GetResourceAccessFromTemporaryUserToken();
-        getResourceAccessFromTemporaryUserToken.setIP('123.123.0.1').setResourceKey('resource-key').setResourceUrl('http://monkey.com');
+        getResourceAccessFromTemporaryUserToken.setIP('123.123.0.1')
+            .setResourceKey('resource-key')
+            .setResourceUrl('http://monkey.com')
+            .setAdBlockerStatus(AccessOptionsAbstract.AD_BLOCKER_STATUS_UNKNOWN);
+
         expect(getResourceAccessFromTemporaryUserToken.getPopulatedValues()).to.deep.equal({
             'ResourceURL': 'http://monkey.com',
             'ResourceKey': 'resource-key',
-            'IP': '123.123.0.1'
+            'IP': '123.123.0.1',
+            'AdBlockerStatus': 'Unknown'
         });
     });
 });
