@@ -27,4 +27,13 @@ describe('GetResourceAccessFromResourceKey', function() {
         expect(getResourceAccessFromResourceKey.setResourceUrl('some-url')).to.be.an.instanceof(GetResourceAccessFromResourceKey);
         expect(getResourceAccessFromResourceKey.setUserToken('user-token')).to.be.an.instanceof(GetResourceAccessFromResourceKey);
     });
+    it('Should populate all the values using setters', function() {
+        var getResourceAccessFromResourceKey = new GetResourceAccessFromResourceKey();
+        getResourceAccessFromResourceKey.setIP('123.123.0.1').setUserToken('user-token-here').setResourceUrl('http://monkey.com');
+        expect(getResourceAccessFromResourceKey.getPopulatedValues()).to.deep.equal({
+            'ResourceURL': 'http://monkey.com',
+            'UserToken': 'user-token-here',
+            'IP': '123.123.0.1'
+        });
+    });
 });
