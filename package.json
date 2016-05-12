@@ -1,6 +1,6 @@
 {
   "name": "imoneza-api",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "iMoneza NodeJS API Library",
   "main": "./lib/index",
   "scripts": {
