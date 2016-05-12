@@ -80,7 +80,7 @@ This is used to save a new resource or update an existing one.  The following se
 
 - `setDescription()` Set the description.
 
-- `setPublicationDate()` Sets the publication date of this resource.
+- `setPublicationDate()` Sets the publication date of this resource (use a Date object).
 
 - `setPricingModel()` The pricing model for this resource. (There are public properties that act like constants for these values under the naming scheme `PRICING_MODEL_*`)
 
@@ -100,9 +100,16 @@ This is used to save a new resource or update an existing one.  The following se
 
 - `setPaywallShortDescription()`
 
-#### `Management.GetCAllbackResult()`
+#### `Management.GetCAllbackResult`
 
 This retrieves the result from a callback received from iMoneza.  The following setters are available:
 
 - `setCallbackToken()` Set the token for the request.
 
+#### `Management.ExternalSubscriberExport`
+
+This initializes a request for an external subscriber export.  The export will be available after a callback is received.  The following setters are available:
+
+- `setStartDate()` The start date of subscribers (use a Date Object)
+
+- `setEndDate()` The end date of the subscriber export (user a Date Object)
