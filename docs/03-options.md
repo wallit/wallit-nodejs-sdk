@@ -82,7 +82,7 @@ This is used to save a new resource or update an existing one.  The following se
 
 - `setPublicationDate()` Sets the publication date of this resource.
 
-- `setPricingModel()` The pricing model for this resource.
+- `setPricingModel()` The pricing model for this resource. (There are public properties that act like constants for these values under the naming scheme `PRICING_MODEL_*`)
 
 - `setPrice()` The price of this content.
 
@@ -95,3 +95,7 @@ This is used to save a new resource or update an existing one.  The following se
 - `setTargetConversionPriceFloor()`
 
 - `setTargetConversionHitsPerRecalculationPeriod()`
+
+- `setPaywallDescription()`
+
+- `setPaywallShortDescription()`
