@@ -99,3 +99,10 @@ This is used to save a new resource or update an existing one.  The following se
 - `setPaywallDescription()`
 
 - `setPaywallShortDescription()`
+
+#### `Management.GetCAllbackResult()`
+
+This retrieves the result from a callback received from iMoneza.  The following setters are available:
+
+- `setCallbackToken()` Set the token for the request.
+
