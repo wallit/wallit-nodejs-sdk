@@ -1,9 +1,9 @@
-# iMoneza NodeJS API Documentation
+# Wallit NodeJS SDK Documentation
 
 ## Introduction
 
-The iMoneza NodeJS API allows you to interact with the iMoneza platform with an object-oriented NodeJS library.  Please make
-sure to get your Access Key/Secret and Management Key/Secret from your [iMoneza Merchant Account](https://manageui.imoneza.com).
+The Wallit NodeJS SDK allows you to interact with the Wallit platform with an object-oriented NodeJS library.  Please make
+sure to get your Access Key/Secret and Management Key/Secret from your [Wallit Merchant Account](https://manageui.wallit.io).
 
 ## Methodology of Use
 
@@ -24,7 +24,7 @@ the NodeJS standards of receiving an error as the first parameter, and the respo
 
 4. Access the result  
 The result is returned as a standard javascript object.  The detailed object responses can be found with the associated
-calls in the [main API documentation](http://imoneza.github.io/documentation/docs/api).  This library will refer to this
+calls in the [main API documentation](https://wallit.github.io/api/).  This library will refer to this
 documentation instead of duplicating the result documentation here.
 
 ## Error Handling
