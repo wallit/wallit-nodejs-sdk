@@ -1,4 +1,4 @@
-# iMoneza NodeJS API Documentation
+# Wallit NodeJS SDK Documentation
 
 ## Connection Object
 
