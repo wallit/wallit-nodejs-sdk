@@ -1,12 +1,12 @@
-# iMoneza NodeJS API
+# Wallit NodeJS SDK
 
 [![Version](https://img.shields.io/npm/v/imoneza-api.svg)](https://www.npmjs.com/package/imoneza-api)
 [![Build Status](https://travis-ci.org/iMoneza/imoneza-php-api.svg?branch=master)](https://travis-ci.org/iMoneza/imoneza-nodejs-api)
 [![Coverage Status](https://coveralls.io/repos/github/iMoneza/imoneza-nodejs-api/badge.svg?branch=master)](https://coveralls.io/github/iMoneza/imoneza-nodejs-api?branch=master)
 
-A NodeJS library to integrate iMoneza into your application.
+A NodeJS library to integrate Wallit into your application.
 
-Using your <http://imoneza.com> account, you can interact with all parts of the API using this library.  This library
+Using your <https://wallit.io> account, you can interact with all parts of the API using this library.  This library
 was tested and is supported on NodeJS 5.* - but may be compatible with older versions.
 
 ## Installation
@@ -18,7 +18,7 @@ This library can be installed using npm.
 ## Basic Usage
 
 There are a number of ways to interact with the API.  But, the way of performing each task is relatively the same.  For
-this example, let's get the Property information from iMoneza.
+this example, let's get the Property information from Wallit.
 
 ```javascript
 var requestCallback = function(err, data) {
@@ -54,12 +54,11 @@ connection.request(getProperty, requestCallback);
 ### Requirements
 
  - NodeJS 5+ (Only tested on 5, may work with older versions but not supported.)
- - iMoneza publisher account
+ - Wallit merchant/publisher account
 
 ### Bugs, Feature Requests and Testing
 
-The features of this project are handled internally by iMoneza.  However, we do encourage you to visit [the issues section](https://github.com/iMoneza/imoneza-nodejs-api/issues)
-here on GitHub if you have any suggestions, requests, or find a bug.
+The features of this project are handled internally by Wallit.  However, we do encourage you to visit [the issues section](https://github.com/wallit/wallit-nodejs-sdk/issues) here on GitHub if you have any suggestions, requests, or find a bug.
 
 ### Author
 
